@@ -1,0 +1,8 @@
+estudo\metricas\metrics\MetricUtils.class
+estudo\metricas\domain\Payload.class
+estudo\metricas\Main.class
+estudo\metricas\beans\MicrometerConfig.class
+estudo\metricas\metrics\MetricNamesConstants.class
+estudo\metricas\controller\Controller.class
+estudo\metricas\metrics\MetricTagsConstants.class
+estudo\metricas\domain\Header.class

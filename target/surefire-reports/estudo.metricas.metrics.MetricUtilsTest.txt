@@ -1,0 +1,32 @@
+-------------------------------------------------------------------------------
+Test set: estudo.metricas.metrics.MetricUtilsTest
+-------------------------------------------------------------------------------
+Tests run: 3, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 2.525 s <<< FAILURE! - in estudo.metricas.metrics.MetricUtilsTest
+incrementCounterTest  Time elapsed: 0.132 s  <<< FAILURE!
+org.mockito.exceptions.verification.WantedButNotInvoked: 
+
+Wanted but not invoked:
+io.micrometer.core.instrument.Counter#0 bean.increment();
+-> at estudo.metricas.metrics.MetricUtilsTest.incrementCounterTest(MetricUtilsTest.java:48)
+Actually, there were zero interactions with this mock.
+
+	at estudo.metricas.metrics.MetricUtilsTest.incrementCounterTest(MetricUtilsTest.java:48)
+
+recordSummaryTest  Time elapsed: 0.021 s  <<< FAILURE!
+org.mockito.exceptions.verification.opentest4j.ArgumentsAreDifferent: 
+
+Argument(s) are different! Wanted:
+io.micrometer.core.instrument.MeterRegistry#0 bean.summary(
+    "test.summary",
+    [tag(name=Teste)]
+);
+-> at estudo.metricas.metrics.MetricUtilsTest.recordSummaryTest(MetricUtilsTest.java:62)
+Actual invocations have different arguments:
+io.micrometer.core.instrument.MeterRegistry#0 bean.summary(
+    "test.summary",
+    [tag(idade=valor_undefined),tag(name=valor_undefined)]
+);
+-> at estudo.metricas.metrics.MetricUtils.financeiroSummary(MetricUtils.java:39)
+
+	at estudo.metricas.metrics.MetricUtilsTest.recordSummaryTest(MetricUtilsTest.java:62)
+
